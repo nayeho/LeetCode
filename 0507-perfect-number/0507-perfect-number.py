@@ -1,17 +1,21 @@
 class Solution:
     def checkPerfectNumber(self, num: int) -> bool:
         
-        return num in {6, 28, 496, 8128, 33550336}
+        # return num in {6, 28, 496, 8128, 33550336}
         
-        return self.getSumOfDivisor(num) == num * 2
+        if num == 1:
+            return False
+        
+        return self.getSumOfDivisor(num) == num
         
         
     def getSumOfDivisor(self, num: int) -> int:
         
-        result = num
+        result = 1
         
-        for i in range(1, num // 2 + 1):
+        for i in range(2, int(sqrt(num)) + 1):
             if num % i == 0:
-                result += i
-        
-        return result
+                result += i + num / i
+                
+        return int(result)
+    
