@@ -1,7 +1,7 @@
 from collections import Counter
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        count = collections.Counter(s)
+        count = Counter(s)
 
         for i, c in enumerate(s):
             if count[c] == 1:
