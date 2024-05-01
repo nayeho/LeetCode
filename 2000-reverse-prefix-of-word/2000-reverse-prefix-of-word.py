@@ -1,0 +1,15 @@
+class Solution:
+    def reversePrefix(self, word: str, ch: str) -> str:
+        if word.count(ch) == 0:
+            return word
+        
+        idx = word.find(ch)
+        
+        if idx == -1:
+            return word
+        
+        prefix = word[:idx+1]
+        other = word[idx+1:]
+        
+        return prefix[::-1] + other
+        
