@@ -8,11 +8,11 @@ class Solution:
 
         for i in range(n):
             if i == 0:
-                result[indices[0]] = "Gold Medal"
+                result[indices[0]] = 'Gold Medal'
             elif i == 1:
-                result[indices[1]] = "Silver Medal"
+                result[indices[1]] = 'Silver Medal'
             elif i == 2:
-                result[indices[2]] = "Bronze Medal"
+                result[indices[2]] = 'Bronze Medal'
             else:
                 result[indices[i]] = str(i + 1)
 
